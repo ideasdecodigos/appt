@@ -1,0 +1,723 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.welcome {
+    text-align: center;
+    padding: 20px;
+
+    img {
+        height: 50px;
+        transition: 1s;
+
+        &:hover {
+            cursor: pointer;
+            height: 55px;
+        }
+    }
+
+    img,
+    h1,
+    i {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.menu {
+    text-align: right;
+    background-color: black;
+    //    cursor: pointer;
+
+    font {
+        display: flex;
+        position: absolute;
+        line-height: 30px;
+        left: 10px;
+        top: 0px;
+
+        img {
+            height: 28px;
+            margin-right: 5px;
+            border: 2px solid dodgerblue;
+            border-radius: 50%;
+        }
+
+        a {
+            text-decoration: none;
+            color: dodgerblue
+        }
+    }
+
+
+    span,
+    button {
+        border: none;
+        outline: none;
+        color: dodgerblue;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+            color: red;
+            transition: .5s;
+        }
+    }
+
+    button {
+        padding: 8px;
+        transform: translateY(2px);
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+.divbtn {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+    width: 100%;
+    z-index: 1;
+
+    select {
+        max-width: 100px;
+    }
+
+    .btn {
+        width: 95%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1.5em;
+        padding: 5px;
+        height: 40px;
+        line-height: 40px;
+
+        &:hover {
+            opacity: .6;
+        }
+
+    }
+}
+
+.active {
+    background: dodgerblue;
+    color: white;
+}
+
+#divReservations {
+    #divcontainer {
+        display: flex;
+        padding: 0 20px;
+
+        #divfiltrar {
+            background: #ddd;
+//            height: 100vh;
+            max-width: 40%;
+            legend ,h3{ 
+                    font-size: 1.5em;
+                    text-align: center;
+                    color: red;
+                margin: 0;
+              }
+            .filtroPc {
+                display: grid; 
+               section {
+                    display: flex;
+                          max-width: 90%;
+                          text-align: center;
+                          padding: 0 10%;
+                }
+
+                .userList {
+//                    overflow-y: scroll;
+                    height: auto;
+                    max-width: 100%;
+                    label { 
+                        text-align: left;
+                        font-size: 1.7em;
+                        display: block;
+
+                        input {
+                            width: 25px;
+                            height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+        
+        #divcitas {
+            width: 80%;
+        }
+    }
+}
+
+#formReserve{
+    display: flex;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    .inputPc{
+        background: #ddd;
+        padding: 10px;
+        margin-right: 50px; 
+        min-width: 90%;
+   
+        p{
+            font-size: 1.7em;
+            text-align: left;
+            margin: 0;
+            input{
+            width: 25px;
+            height: 25px;
+                
+            }
+        }
+    }
+    .secBody{
+        width: 100%;
+//        background: red;
+    .infoCliente{
+     display: grid;
+        width: inherit;
+        input,textarea{
+            width: 94%;
+        }
+    }
+    }
+}
+
+@media screen and (max-width:"500px"){
+#formReserve{
+    max-width: 80%;
+    }
+#divReservations {
+    #divcontainer {
+        display: grid;
+
+        #divfiltrar {
+            background: #ddd;
+            height: auto;
+            max-width: 100%;
+            .filtroPc {
+                margin: auto;
+                display: flex;
+            }               
+        }        
+        #divcitas {
+            width: 100%;
+        }
+    }
+}
+} 
+
+#divUser section {
+    text-align: center;
+    padding-bottom: 50px;
+
+    a {
+        margin: 10px;
+        text-decoration: none;
+    }
+}
+
+.flechasUp,
+.flechasDown {
+    display: block;
+    max-width: 1200px;
+    text-decoration: none;
+    font-size: 2em;
+    color: dodgerblue;
+    text-align: center;
+    z-index: 0;
+    animation: arrowUp 2s infinite;
+}
+
+@keyframes arrowUp {
+    0% {
+        transform: translateY(10px);
+        opacity: 0.5;
+    }
+
+    20% {
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+
+    40% {
+        transform: translateY(7px);
+        opacity: 0.3;
+    }
+
+    90% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(8px);
+        opacity: 1;
+    }
+}
+
+.flechasDown {
+    animation: arrowDown 2s infinite;
+}
+
+@keyframes arrowDown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0.5;
+    }
+
+    20% {
+        transform: translateY(0px);
+        opacity: 0.8;
+    }
+
+    40% {
+        transform: translateY(-7px);
+        opacity: 0.3;
+    }
+
+    90% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+
+.divtab {
+    display: none;
+    border-top: none;
+
+    #divcitas center img {
+        max-width: 700px;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 0; 
+    }
+
+    table {
+        width: 96%;
+        margin: auto;
+        transition: 1s;
+        max-width: 1200px;
+
+        thead {
+            background: dodgerblue;
+            color: white;
+        }
+
+        tbody th {
+            color: dodgerblue;
+            text-shadow: 0.5px 0.5px black;
+
+        }
+
+        tbody tr td button {
+            background: none;
+            border: none;
+            outline: none;
+            color: red;
+            cursor: pointer;
+            font-size: 1.3em;
+            padding: 0;
+            margin: 0;
+        }
+
+        tr.thdiario th {
+            text-shadow: none;
+            background: #a7c3fa;
+            color: black;
+
+        }
+
+        tr.tddiario td {
+            background: #dde8fd;
+        }
+
+        .thdiario,
+        .tddiario {
+            display: none;
+            transition: 1s;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 2px;
+
+
+        }
+
+        th.icon-delete {
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        .tfoot tr th {
+            background: dodgerblue;
+            color: white;
+        }
+
+        .tfoot tr td {
+            text-align: left
+        }
+
+        .tfoot tr:nth-child(even) {
+            background: #ddd;
+            background: #ddd;
+        }
+
+        .icon-sort,
+        .icon-list {
+            cursor: pointer
+        }
+    }
+
+    form {
+        margin: auto;
+        width: 300px;
+        padding: 5px;
+        max-width: 100%;
+
+        input,
+        textarea,
+        select,
+        fieldset,
+        button {
+            width: 100%;
+            margin: 5px auto;
+            padding: 5px;
+        }
+
+        i {
+            display: block;
+            font-size: 10px;
+            text-align: right;
+        }
+
+        label input[type=date],
+        label input[type=time],
+        fieldset {
+            padding: 0 2px;
+            width: 90%;
+        }
+
+        input[type=checkbox] {
+            width: auto;
+        }
+
+        #fieldSetSearch {
+            span {
+                font-size: 1.9em;
+                color: #065acf;
+            }
+
+            select {
+                padding: 2px 5px;
+                height: 25px;
+            }
+
+            input[type=date] {
+                padding: 2px 5px;
+                height: 17px;
+            }
+
+            input[type=checkbox] {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        select {
+            width: 105%;
+        }
+
+        fieldset {
+            width: 102%;
+            border: 1px solid gray;
+ 
+            legend {
+                text-align: center
+            }
+
+            label input {
+                width: auto;
+                margin: auto 5px;
+            }
+        }
+
+        button {
+            padding: 10px;
+            background-color: dodgerblue;
+            color: white;
+            width: 105%;
+            cursor: pointer;
+            outline: none;
+            border: 1px solid gray;
+            transition: 0.3s;
+
+            &:hover {
+                opacity: .6;
+                color: black;
+            }
+        }
+
+        p {
+            text-align: center;
+
+            span {
+                color: blue;
+                cursor: pointer;
+            }
+        }
+
+        p#infoerror {
+            padding: 0;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+
+    .citafecha {
+        font-weight: bold;
+        font-style: italic;
+        background: #eee;
+        display: block;
+        padding: 5px;
+        border-bottom: 5px solid dodgerblue;
+        font-size: 1.5em;
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        box-shadow: 1px 2px 7px lightgray;
+        margin-bottom: 15px;
+        padding: 5px 0;
+        font-style: normal;
+
+        .left {
+            .load {
+                color: dodgerblue;
+                text-align: center;
+                margin: 0 ;
+
+                meter {
+                    width: 100%;
+                }
+            }
+
+            .info {
+                display: none;
+                position: absolute;
+                background-color: #eee;
+                z-index: 1;
+                padding: 5px;
+                width: 100%;
+                max-width: 300px;
+                box-shadow: 1px 2px 5px gray;
+
+                i {
+                    font-size: 12px
+                }
+
+                p {
+                    margin: 0
+                }
+
+                a {
+                    text-decoration: none
+                }
+
+            }
+
+            display: grid;
+            width: 100%;
+            padding-left: 5px;
+
+            .header {
+                background-color: #eee;
+                text-align: right;
+                padding-right: 2px;
+
+                span {
+                    cursor: pointer;
+                    color: blue;
+                    font-weight: bold;
+                }
+            }
+
+            .body {
+                display: flex;
+
+                h2 {
+                    display: flex;
+                    font-size: 2em
+                }
+
+                .gion {
+                    margin-left: 10px;
+                    color: dodgerblue;
+                }
+
+                .am_pm {
+                    span {
+                        display: grid;
+                        width: 8px;
+
+                        i {
+                            line-height: 16px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+            }
+
+            .foot {
+
+                a,
+                span {
+                    text-decoration: none
+                }
+
+                p {
+                    font-weight: normal;
+                    margin: 0;
+                }
+
+                .date {
+                    font-weight: normal;
+                    font-size: 12px;
+                    display: block;
+                    text-align: right;
+                    color: dodgerblue;
+                }
+            }
+
+
+        }
+
+        .right {
+            display: grid;
+
+            button,
+            input { 
+                color: red;
+                border-radius: 3px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background: none;
+                font-size: 1.5em;
+                line-height: 90%;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+    }
+
+}
+
+#cita { 
+    padding: 0 auto;
+    margin: 0 auto;
+    display: flex;
+} 
+  
+#tiempoEstimado { 
+display: grid;
+    width: 100%;
+    input{
+        max-width: 90%;
+    margin: 0 auto;
+    }
+    div {
+            display: flex;
+        label{
+            margin: 5px;
+            background: #bbddfb;
+            border-left: 3px solid dodgerblue;
+            font-weight: bold;
+            border-radius:0 5px 5px 0;
+            padding: 0 5px;
+            margin:5px auto;
+            span{color: red}
+        }
+    }
+}
+
+fieldset {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+footer {
+    .redes {
+        img {
+            height: 30px;
+            margin: 0 5px;
+        }
+
+        a {
+            text-decoration: none
+        }
+    }
+
+    background: black;
+    color: white;
+    text-align: center;
+    padding:20px 5%;
+    bottom: 0;
+    width: 90%;
+
+    p,
+    i {
+        padding: 0;
+        margin: 0;
+    }
+
+    p a,
+    #subir a {
+        text-decoration: none;
+        color: dodgerblue
+    }
+}
+
+@media screen and (max-width:"350px") {
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin: 0 1%;
+    }
+
+}

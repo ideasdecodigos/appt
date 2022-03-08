@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+.divbtn {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: flex;
+
+    select {
+        max-width: 100px;
+    }
+
+    .btn {
+        width: 95%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 1.5em;
+        padding: 5px;
+        height: 40px;
+        line-height: 40px;
+
+        &:hover {
+            opacity: .6;
+        }
+
+    }
+}
+ 
+div.body,
+ol,
+h1 {
+    margin: 10px 5%
+}
+
+p {
+    margin: 10px 0
+}
+
+p.title {
+    font-weight: bold
+}
+
+div {
+    display: grid
+}
+
+.color {
+    display: inline-block;
+    width: 15px;
+    height: 15px
+}
+
+  .contactos {
+            width: 85%;
+            display: flex;
+            padding: 20px;
+        }
+
+        .contactos .column {
+            display: inline-block;
+            margin: auto;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .contactos .column a {
+            text-decoration: none;
+            color: dodgerblue;
+        }
+
+      .contactos .column   form {
+            display: inline-block;
+        }
+
+      .contactos .column   input,
+       .contactos .column  textarea,
+       .contactos .column  button {
+            width: 100%;
+            padding: 10px 2px;
+            margin: 2px;
+            border: none;
+            border-bottom: 1px solid gray;
+            background: rgba(0, 0, 0, 0);
+        }
+
+       .contactos .column  button {
+            background-color: dodgerblue;
+            color: white;
+            border: none;
+            outline: none;
+        }
+
+        @media screen and (max-width:700px) {
+            .contactos {
+                display: grid;
+            }
+
+            .column {
+                margin: 10px auto;
+            }
+
+            .lgn {
+                padding: 20px 5px;
+            }
+        }
+
+section {
+    text-align: center
+}
+
+footer {
+    .redes {
+        display: block;
+
+        img {
+            height: 30px;
+            margin: 0 5px;
+
+        }
+
+        a {
+            text-decoration: none
+        }
+    }
+
+    background: black;
+    color: white;
+    text-align: center;
+    padding:20px 5%;
+    bottom: 0;
+    width: 90%;
+
+    p a,
+    #subir a {
+        text-decoration: none;
+        color: dodgerblue
+    }
+
+    p,
+    i {
+        padding: 0;
+        margin: 0;
+    }
+}
